@@ -1,0 +1,71 @@
+/* =========================================
+   Estilos generales - Valentina · Mis 15 Años
+   ========================================= */
+
+body {
+    background-color: #F5E9DA; /* beige clarito */
+    color: #2B1F22;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-serif {
+    font-family: 'Playfair Display', serif;
+}
+
+.font-script {
+    font-family: 'Great Vibes', cursive;
+}
+
+/* Barra de desplazamiento personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #F5E9DA;
+}
+::-webkit-scrollbar-thumb {
+    background: #C96A8A;
+    border-radius: 4px;
+}
+
+/* Ocultar barra de desplazamiento en carruseles */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* =========================================
+   Carrusel: fotos verticales completas
+   La foto se ve entera (sin recortar) y detrás
+   se pone la misma foto desenfocada como fondo.
+   ========================================= */
+.slide-fondo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(24px) brightness(0.75);
+    transform: scale(1.15);
+    pointer-events: none;
+}
+
+.slide-foto {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 1;
+}
+
+/* Miniaturas de video (primer cuadro del video) */
+.video-miniatura {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
